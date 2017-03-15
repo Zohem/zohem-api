@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es6"
+    ],
+    "outDir": "build",
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/**/**.ts",
+    "test/**/**.ts",
+    "typings/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,40 @@
+Zohem Protocol
+The zohem protocol lists out specifications for the Interactions between Users,Publishers and advertisers so that they together form a trustless system which is currently missing somewhere in the advertising ecosystem.
+a->
+User fingerprinting system is part of protocol where the GUUID is generated.
+Takes in parameters
+this is murmur_hash(sigma(browser,cookie,plugins,timezone,location))
+these help in generating a GUUID for user fingerprinting.
+
+b->
+The Data pushed in by the publishers/dsps/third party data providers will be format 
+{
+	fingerprint:"*",
+	region:"*",
+	location:'*'
+	etc.
+}
+
+d->For these entities to use the internal data metrics and part to the ecosystem they have to provide a minimum threshold proof of authenticated data which is provided by protocol.The verification process of these data pushing entitties will be trustless and will be caluculated by following rules:-
+
+1->Their trust score > 0.34
+Trust score of puublishers is calculated and incremented by following formulation:-
+final_trust_score = intial_trust_score + phi(current_data) + chi(whole_data)
+initial_trust_score = reputation(publisher)
+
+phi(current_data) = function which takes in current data and checks the integrity of data by the metric of how much confidence it has provided for the existing data in ecosystem.
+chi(whole_data) = will be a function which takes in whole data of publisher input and checks the monetary and promotionary benefit it has accounted for the advertisers.
+
+c->By pushing the data in the format described int the protocol the publishers/dsps/third aprty providers can earn zdts once they are part of system according to rules.
+
+e->The minimum zdt to be withrawd from the account has to be greater than the transaction gas the publisher will have to pay.
+
+f->Advertiser will give the queries and will have to pay according to that.The number of people he wants to target and dpeth of data he wants will determine the zdt he would be paying pe rperson for the campaign.
+
+h->Users will be able to fetch his data saved by zohem to ensure transparency.
+
+i->Advertising will follow the  OpenRTB protocol for real time bidding for the same space and multiple advertisers on the basis of data.
+
+j->Every time data is sent will increase the confidence score by some value
+given by  new cofindence =  (1-beforeCI)*(trustScore)*(sd)
+where sd is the stepdown value trustScore is the trustScorre of publisher in that category of data
